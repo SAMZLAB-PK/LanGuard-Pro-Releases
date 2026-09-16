@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Google Play
+    url: https://play.google.com/store/apps/details?id=com.samz.languardpro
+    about: Install or update LanGuard Pro from Google Play.
+  - name: Privacy Policy
+    url: https://github.com/SAMZLAB-PK/LanGuard-Pro-Privacy
+    about: Read LanGuard Pro privacy information.
+  - name: SAMZ Labs
+    url: https://github.com/SAMZLAB-PK
+    about: Visit the SAMZ Labs GitHub profile.
