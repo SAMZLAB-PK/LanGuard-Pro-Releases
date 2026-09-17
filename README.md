@@ -1,71 +1,85 @@
-# LanGuard Pro
+<p align="center">
+  <img src="assets/banner.svg" alt="LanGuard Pro — Smart Router Control" width="100%" />
+</p>
 
-**Official public release hub for LanGuard Pro by SAMZ Labs.**
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.samz.languardpro"><img alt="Google Play" src="https://img.shields.io/badge/Google_Play-Get_LanGuard_Pro-00A67E?style=for-the-badge&logo=googleplay&logoColor=white"></a>
+  <a href="https://github.com/SAMZLAB-PK/LanGuard-Pro-Releases/releases"><img alt="Releases" src="https://img.shields.io/badge/Latest-2.9.4%20%2820905%29-0F766E?style=for-the-badge&logo=github"></a>
+  <img alt="Android API" src="https://img.shields.io/badge/Target-Android%2016%20%7C%20API%2036-0D9488?style=for-the-badge&logo=android&logoColor=white">
+  <img alt="Router OS" src="https://img.shields.io/badge/Router-OpenWrt%20%7C%20ImmortalWrt-0891B2?style=for-the-badge&logo=openwrt&logoColor=white">
+</p>
 
-LanGuard Pro is an Android + OpenWrt/ImmortalWrt network-management companion for monitoring connected devices, viewing live network activity, applying device controls, managing router services, and keeping LanGuard router components in sync.
+<p align="center"><strong>LanGuard Pro</strong> is a mobile-first router companion for fast device visibility, traffic monitoring and practical home-network control — without turning router management into a wall of technical menus.</p>
 
-> The main LanGuard Pro development repository is private. This public repository is intentionally limited to release information, public documentation, support links, changelogs, and official distribution references.
-
-## Get LanGuard Pro
-
-### Google Play
-
-**Recommended installation method:**
-
-https://play.google.com/store/apps/details?id=com.samz.languardpro
-
-Package ID: `com.samz.languardpro`
-
-### GitHub Releases
-
-When a standalone APK is published by SAMZ Labs, it will appear in this repository's **Releases** section. Prefer Google Play for normal installations and updates.
-
-## Current release
-
-**LanGuard Pro 2.9.4**  
-Version code: `20905`  
-Target: Android 16 / API 36
-
-Highlights:
-
-- Safer SSH host-key handling with guided **Reset SSH Trust & Retry** recovery.
-- Hardened router credentials using Android Keystore-backed encrypted storage.
-- Improved per-device live-speed tracking with IPv4 + IPv6 accounting.
-- 2-second foreground refresh cadence for Android Home/Devices and LuCI live views.
-- Improved speed-test fallback behavior and reduced unnecessary parallel load.
-- Updated LuCI LanGuard Pro page with official Google Play and SAMZ Labs links.
-- Companion/LuCI payload synchronization and release-hardening checks.
-
-See [CHANGELOG.md](CHANGELOG.md) for details.
-
-## Router compatibility
-
-LanGuard Pro is designed for supported OpenWrt/ImmortalWrt installations using the LanGuard Companion and LuCI LanGuard Pro components. Router compatibility depends on firmware, available packages, firewall/nftables support, and device architecture.
-
-Before installing or repairing router components, make sure SSH access to the router is enabled and that you know the router's administrator credentials.
-
-## Privacy
-
-Privacy policy and public privacy documentation:
-
-https://github.com/SAMZLAB-PK/LanGuard-Pro-Privacy
-
-## Support
-
-For installation problems, router compatibility questions, or reproducible bugs, see [SUPPORT.md](SUPPORT.md) and open an issue in this repository when appropriate.
-
-Please do **not** post router passwords, SSH private keys, public IP addresses you consider sensitive, API tokens, Play signing keys, or other credentials in public issues.
-
-## Security
-
-Security-related guidance and private-reporting recommendations are in [SECURITY.md](SECURITY.md).
-
-## Links
-
-- SAMZ Labs: https://github.com/SAMZLAB-PK
-- Google Play: https://play.google.com/store/apps/details?id=com.samz.languardpro
-- Privacy: https://github.com/SAMZLAB-PK/LanGuard-Pro-Privacy
+<p align="center"><a href="https://play.google.com/store/apps/details?id=com.samz.languardpro"><strong>Get LanGuard Pro on Google Play</strong></a> &nbsp;•&nbsp; <a href="CHANGELOG.md">What's new</a> &nbsp;•&nbsp; <a href="SUPPORT.md">Support</a> &nbsp;•&nbsp; <a href="https://github.com/SAMZLAB-PK/LanGuard-Pro-Privacy">Privacy</a></p>
 
 ---
 
-© 2026 SAMZ Labs. LanGuard Pro name, app branding, and release materials are maintained by SAMZ Labs.
+## Network control that stays readable
+
+| ⚡ Live Traffic | 📱 Device Control | 🛡️ Security Controls |
+| --- | --- | --- |
+| Per-device upload/download activity with a responsive foreground refresh. | Identify, rename and manage connected devices from a phone-friendly interface. | Block or restore internet access quickly and keep policy state synchronized. |
+
+| 🚦 Speed Limits | 🚫 AdBlock Control | 🌐 LuCI + Companion |
+| --- | --- | --- |
+| Apply practical per-device limits and priority controls. | Check router-side AdBlock state and start or stop it without digging through menus. | Android and native LuCI share the same router companion data path for consistent status. |
+
+## Latest release — 2.9.4 (20905)
+
+> **Release focus:** connection resilience, more accurate live traffic and cleaner Play Store readiness.
+
+- Smarter SSH trust recovery with **Reset SSH Trust & Retry** guidance when router identity changes.
+- Fixed the host-key repository path that could surface `NullPointerException` during SSH reconnects.
+- Foreground Home and Devices refresh tuned to a **2-second cadence** for a more LuCI-like realtime feel.
+- Dual-stack traffic accounting for **IPv4 + IPv6** device activity.
+- Improved handling for devices that are active but previously showed no live speed.
+- Speed-test fallback tuned to avoid unnecessary parallel load while preserving useful results.
+- Android target aligned with **API 36**.
+- LuCI includes direct Google Play and public release/support links.
+
+See the complete history in **[CHANGELOG.md](CHANGELOG.md)**.
+
+## How LanGuard Pro fits together
+
+```text
+Android app
+    │
+    ├── secure router session / SSH installer
+    │
+    └── canonical Companion / ubus data
+                     │
+              OpenWrt / ImmortalWrt
+                     │
+        ┌────────────┴────────────┐
+        │                         │
+    LuCI LanGuard Pro       Router services
+        │                         │
+        └──── shared state ───────┘
+```
+
+The public repository is intentionally a **release, support and documentation hub**. The active development source repository is private.
+
+## Router compatibility
+
+LanGuard Pro is built around **OpenWrt / ImmortalWrt** style routers with SSH, ubus and LuCI integration. Current development and validation have focused primarily on the Xiaomi/Redmi AX3200 / AX6S class and compatible router environments.
+
+Router firmware layouts vary. Before major firmware upgrades, keep a router backup and be prepared to reinstall or repair the LanGuard companion package.
+
+## Privacy and security
+
+LanGuard Pro is designed for local router administration. Sensitive router credentials should not be posted in public issues, screenshots or logs.
+
+- 🔐 **Privacy policy:** [LanGuard-Pro-Privacy](https://github.com/SAMZLAB-PK/LanGuard-Pro-Privacy)
+- 🛡️ **Security reporting:** [SECURITY.md](SECURITY.md)
+- 🧰 **Troubleshooting:** [SUPPORT.md](SUPPORT.md)
+
+## Need help?
+
+Before opening an issue, include useful technical context — but **never include passwords, SSH keys or Play signing material**.
+
+➡️ **[Open a support issue](https://github.com/SAMZLAB-PK/LanGuard-Pro-Releases/issues/new/choose)**
+
+---
+
+<p align="center"><strong>SAMZ Labs</strong><br>Building practical network tools, dashboards and automation projects.<br><br><a href="https://github.com/SAMZLAB-PK">GitHub</a> &nbsp;•&nbsp; <a href="https://play.google.com/store/apps/details?id=com.samz.languardpro">Google Play</a> &nbsp;•&nbsp; <a href="https://github.com/SAMZLAB-PK/LanGuard-Pro-Privacy">Privacy</a></p>
