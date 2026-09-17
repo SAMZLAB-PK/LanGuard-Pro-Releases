@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420">
+<defs><linearGradient id="bg" x1="0" x2="1"><stop stop-color="#071526"/><stop offset=".55" stop-color="#09283a"/><stop offset="1" stop-color="#07131f"/></linearGradient></defs>
+<rect width="1400" height="420" rx="28" fill="url(#bg)"/><circle cx="1210" cy="70" r="220" fill="#12d6a0" opacity=".05"/><circle cx="1160" cy="360" r="260" fill="#1aa7ff" opacity=".05"/>
+<image href="app-icon.png" x="80" y="70" width="280" height="280"/>
+<text x="410" y="150" font-family="Arial,sans-serif" font-size="74" font-weight="700" fill="white">LanGuard <tspan fill="#20e3b2">Pro</tspan></text>
+<text x="414" y="205" font-family="Arial,sans-serif" font-size="28" fill="#c8d8e8">Smarter Network  •  Safer Devices  •  Full Control</text>
+<text x="414" y="265" font-family="Arial,sans-serif" font-size="24" fill="#7fead4">Monitor  •  Block  •  Limit  •  Control  •  Protect</text>
+<rect x="414" y="305" width="150" height="48" rx="12" fill="#0d2636" stroke="#20e3b2"/><text x="489" y="337" text-anchor="middle" font-family="Arial" font-size="19" fill="white">Android</text>
+<rect x="580" y="305" width="150" height="48" rx="12" fill="#0d2636" stroke="#16bffd"/><text x="655" y="337" text-anchor="middle" font-family="Arial" font-size="19" fill="white">OpenWrt</text>
+<rect x="746" y="305" width="150" height="48" rx="12" fill="#0d2636" stroke="#20e3b2"/><text x="821" y="337" text-anchor="middle" font-family="Arial" font-size="19" fill="white">API 36</text>
+<rect x="912" y="305" width="180" height="48" rx="12" fill="#0d2636" stroke="#16bffd"/><text x="1002" y="337" text-anchor="middle" font-family="Arial" font-size="19" fill="white">Latest 2.9.4</text>
+<text x="1280" y="350" text-anchor="end" font-family="Arial" font-size="28" font-weight="700" fill="white">SAMZ LABS</text><text x="1280" y="377" text-anchor="end" font-family="Arial" font-size="14" fill="#8aa9bc">BUILDING USEFUL SOLUTIONS</text>
+</svg>
