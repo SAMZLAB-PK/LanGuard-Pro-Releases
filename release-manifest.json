@@ -14,6 +14,7 @@
   "companion": {
     "version": "2.9.3-r9",
     "changelog": [
+      "Router Companion installation self-heals CRLF shell payloads and refuses success unless shell syntax verifies.",
       "Speed limits prefer tc clsact ingress/egress policing and verify that the rules were installed.",
       "Priority policy no longer gets blocked by an unverified limiter save.",
       "Speed-test upload timing excludes connection/TLS setup and the test uses bounded two-stream transfers.",
