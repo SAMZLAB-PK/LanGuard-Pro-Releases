@@ -4,30 +4,29 @@
     "versionName": "2.9.3",
     "versionCode": 20904,
     "changelog": [
-      "App device live speeds and Wi-Fi metadata are synchronized with the same rich LanGuard Pro snapshot as LuCI.",
-      "Device rename/IP changes invalidate caches and are confirmed after refresh.",
-      "Offline LAN/Wi-Fi remembered devices can be removed with a left-swipe Delete action.",
-      "Router speed test now uses sustained-transfer timing to reduce TLS/setup under-reporting.",
-      "SQM/CAKE setup verifies an active CAKE qdisc and reconnects the app session without reboot.",
-      "Unified update notices cover the Android app, Router Companion, and LuCI LanGuard Pro."
+      "Per-device speed limit and priority enforcement now use a tc clsact/police backend with verified fallback handling.",
+      "Router speed test uses a shorter sustained-transfer method, keeps the screen awake, and fixes upload timing.",
+      "SQM installation lets the package manager resolve firmware-matched dependencies before optional kernel modules.",
+      "Network AdBlock installation runs as an asynchronous router job so long package downloads do not hit the app RPC timeout.",
+      "Existing R8 device metadata, live speeds, rename sync, swipe-delete and update notifications are retained."
     ]
   },
   "companion": {
-    "version": "2.9.3-r8",
+    "version": "2.9.3-r9",
     "changelog": [
-      "Per-device speed limits now use verified nftables prerouting/download and postrouting/upload enforcement.",
-      "High/Low priority uses verified IPv4 DSCP rules instead of silently ignored MAC rules.",
-      "Speed and priority policy failures roll back saved state instead of reporting false success.",
-      "Speed test fallback uses adaptive sustained transfers and excludes connection/TLS setup time.",
-      "Online devices are protected from remembered-device deletion."
+      "Speed limits prefer tc clsact ingress/egress policing and verify that the rules were installed.",
+      "Priority policy no longer gets blocked by an unverified limiter save.",
+      "Speed-test upload timing excludes connection/TLS setup and the test uses bounded two-stream transfers.",
+      "SQM package installation tolerates firmware-specific optional kmod availability.",
+      "AdBlock installation exposes an asynchronous job status API instead of holding one long RPC request."
     ]
   },
   "luci": {
-    "version": "2.9.3-r8",
+    "version": "2.9.3-r9",
     "changelog": [
-      "Speed Control uses the shared verified R8 limiter backend.",
-      "Device policy editor supports Normal, High and Low traffic priority.",
-      "Saved speed and priority policy state refreshes immediately in LuCI and Android."
+      "Speed Control uses the verified R9 shared policy backend.",
+      "High and Low traffic priority remain synchronized with the Android app.",
+      "Policy errors return the real backend failure instead of leaving saved state out of sync."
     ]
   }
 }
