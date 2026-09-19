@@ -4,27 +4,30 @@
     "versionName": "2.9.3",
     "versionCode": 20904,
     "changelog": [
-      "App device live speeds now use the same rich LanGuard Pro snapshot as LuCI.",
+      "App device live speeds and Wi-Fi metadata are synchronized with the same rich LanGuard Pro snapshot as LuCI.",
       "Device rename/IP changes invalidate caches and are confirmed after refresh.",
-      "Router speed test uses bounded multi-stream aggregate measurements.",
-      "SQM/CAKE setup installs faster, verifies an active CAKE qdisc, and reconnects the app session without reboot.",
+      "Offline LAN/Wi-Fi remembered devices can be removed with a left-swipe Delete action.",
+      "Router speed test now uses sustained-transfer timing to reduce TLS/setup under-reporting.",
+      "SQM/CAKE setup verifies an active CAKE qdisc and reconnects the app session without reboot.",
       "Unified update notices cover the Android app, Router Companion, and LuCI LanGuard Pro."
     ]
   },
   "companion": {
-    "version": "2.9.3-r6",
+    "version": "2.9.3-r8",
     "changelog": [
-      "Live device telemetry synchronized with the LuCI rich snapshot.",
-      "Device rename cache invalidation and immediate refresh.",
-      "SQM/CAKE setup and verification fixes.",
-      "Improved bounded multi-stream router speed test."
+      "Per-device speed limits now use verified nftables prerouting/download and postrouting/upload enforcement.",
+      "High/Low priority uses verified IPv4 DSCP rules instead of silently ignored MAC rules.",
+      "Speed and priority policy failures roll back saved state instead of reporting false success.",
+      "Speed test fallback uses adaptive sustained transfers and excludes connection/TLS setup time.",
+      "Online devices are protected from remembered-device deletion."
     ]
   },
   "luci": {
-    "version": "2.9.3-r6",
+    "version": "2.9.3-r8",
     "changelog": [
-      "Unified device data with Android app.",
-      "R6 component version contract and update notification support."
+      "Speed Control uses the shared verified R8 limiter backend.",
+      "Device policy editor supports Normal, High and Low traffic priority.",
+      "Saved speed and priority policy state refreshes immediately in LuCI and Android."
     ]
   }
 }
