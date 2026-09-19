@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "app": {
+    "versionName": "2.9.3",
+    "versionCode": 20904,
+    "changelog": [
+      "App device live speeds now use the same rich LanGuard Pro snapshot as LuCI.",
+      "Device rename/IP changes invalidate caches and are confirmed after refresh.",
+      "Router speed test uses bounded multi-stream aggregate measurements.",
+      "SQM/CAKE setup installs faster, verifies an active CAKE qdisc, and reconnects the app session without reboot.",
+      "Unified update notices cover the Android app, Router Companion, and LuCI LanGuard Pro."
+    ]
+  },
+  "companion": {
+    "version": "2.9.3-r6",
+    "changelog": [
+      "Live device telemetry synchronized with the LuCI rich snapshot.",
+      "Device rename cache invalidation and immediate refresh.",
+      "SQM/CAKE setup and verification fixes.",
+      "Improved bounded multi-stream router speed test."
+    ]
+  },
+  "luci": {
+    "version": "2.9.3-r6",
+    "changelog": [
+      "Unified device data with Android app.",
+      "R6 component version contract and update notification support."
+    ]
+  }
+}
